@@ -23,12 +23,12 @@ const DarkModeIcon = () => {
       {darkMode ? (
         <Moon
           onClick={toggleDarkMode}
-          className="border-2 rounded-[50%] cursor-pointer w-8 h-8 p-[5px] text-white bg-primary"
+          className="border-2 cursor-pointer rounded-[50%] w-8 h-8 p-[5px] text-white bg-primary"
         />
       ) : (
         <Sun
           onClick={toggleDarkMode}
-          className="border-2 rounded-[50%] cursor-pointer w-8 h-8 p-[5px] text-white bg-primary"
+          className="border-2 cursor-pointer rounded-[50%] w-8 h-8 p-[5px] text-white bg-primary"
         />
       )}
     </>

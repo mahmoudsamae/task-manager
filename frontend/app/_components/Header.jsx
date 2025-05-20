@@ -18,10 +18,13 @@ const Header = () => {
   return (
     <header className="bg-white dark:bg-darkSecondary fixed top-0 w-full z-50">
       <div className="mx-auto w-full flex justify-between h-16 max-w-screen-xl items-center ">
-        <div className="flex flex-1 items-center justify-between w-full ml-4">
-          <Link className="block text-teal-600 mr-4" href="/">
+        <div className="flex flex-1 items-center  justify-between w-full ml-2.5 sm:ml-4">
+          <Link
+            className="block relative text-teal-600 mr-4 w-8 sm:w-10 h-10 overflow-hidden"
+            href="/"
+          >
             <span className="sr-only">Home</span>
-            <Image src="/logo.svg" alt="logo" width={40} height={40} priority />
+            <Image src="/logo.svg" alt="logo" fill priority />
           </Link>
           <div className="flex flex-1 justify-between items-center w-full">
             <div className="sticky inset-x-0">
@@ -39,7 +42,7 @@ const Header = () => {
                       <div>
                         <p className="text-xs">
                           <strong className="block font-bold text-[12px] dark:text-white sm:text-[15px] capitalize">
-                            Welcome, {user?.user?.username}
+                            {user?.user?.username}
                           </strong>
 
                           <span className="dark:text-gray-300">
@@ -98,7 +101,7 @@ const Header = () => {
             </div>
           )}
         </div>
-        <div className="flex items-center justify-end sm:justify-center gap-3 w-[23vw] mr-3 sm:mr-0 sm:w-[25vw] lg:w-[20vw]">
+        <div className="flex items-center justify-end sm:justify-center gap-2 sm:gap-3 w-[25vw] sm:w-[23vw] mr-3 sm:mr-0 md:w-[25vw] lg:w-[20vw]">
           <DarkModeIcon />
           {isLoggedIn && (
             <div className="sticky inset-x-0 bottom-0 bg-white dark:bg-darkSecondary">

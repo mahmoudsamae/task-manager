@@ -48,7 +48,7 @@ const SettingBar = () => {
     setIsMounted(true);
   }, []);
   return (
-    <div className="flex bg-white dark:bg-darkSecondary h-screen w-16 flex-col justify-between fixed top-16 z-50">
+    <div className="flex bg-white dark:bg-darkSecondary h-screen w-13 sm:w-16 flex-col justify-between fixed top-16 z-50">
       <div>
         <div className="border-t border-gray-100 dark:border-darkPrimary">
           <div className="px-2">
