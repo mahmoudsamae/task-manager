@@ -1,0 +1,19 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-primary: #fc1201;
+  --color-hover: #f54336;
+
+  --color-darkPrimary: #363535;
+  --color-darkSecondary: #171717;
+
+  --shadow-primary: 0 0 10px rgba(252, 18, 1, 0.85); 
+}
+a, button{
+  transition: .5s;
+  /* color: rgb(252, 18, 1); */
+}
+a:active, button:active{
+  scale: 0.6;
+}
