@@ -96,8 +96,8 @@ const TaskContainer = () => {
         </div>
       ) : (
         <div className=" w-[100%] h-[30vh] sm:h-[50vh] md:h-[60vh] flex flex-col justify-center items-center gap-3">
-          <div className="w-[300px] gap-4 flex flex-col justify-center items-center h-[200px] bg-white dark:bg-darkSecondary rounded-4xl shadow-2xl">
-            <h1 className="text-2xl font-bold dark:text-white">
+          <div className="w-[250px] sm:w-[300px] p-4 gap-4 flex flex-col justify-center items-center h-[200px] bg-white dark:bg-darkSecondary rounded-4xl shadow-2xl">
+            <h1 className="text-2xl font-bold dark:text-white text-center">
               You Have No Task Yet.
             </h1>
             <p className="dark:text-gray-300">Let's do your first.</p>

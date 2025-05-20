@@ -28,12 +28,12 @@ const DeleteAllTasks = () => {
     }
   }
   return (
-    <div className="absolute w-[100vw] h-[100vh] pb-29 pr-30  inset-0 flex justify-center items-center">
+    <div className="absolute w-[100vw] h-[100vh] pb-29 pr-0 sm:pr-30   inset-0 flex justify-center items-center">
       <div
         onClick={() => setIsDeleteAll(false)}
-        className="bg-darkSecondary opacity-30 w-[100vw] h-[100vh] mb-3 ml-30 absolute z-50 border-2 border-primary"
+        className="bg-darkSecondary opacity-30 w-[100vw] h-[100vh] mb-3  sm:ml-30 absolute z-50"
       />
-      <div className="relative z-50 w-[300px] h-[200px] flex flex-col justify-center items-center gap-3 bg-white dark:bg-darkSecondary rounded-2xl shadow-2xl/45 shadow-white">
+      <div className="relative z-50 w-[250px] sm:w-[300px] p-4 sm:p-0 h-[200px] flex flex-col justify-center items-center gap-3 bg-white dark:bg-darkSecondary rounded-2xl shadow-2xl/45 shadow-white">
         <X
           onClick={() => setIsDeleteAll(false)}
           className="absolute text-primary top-2 right-2 cursor-pointer"

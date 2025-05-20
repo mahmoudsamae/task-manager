@@ -28,7 +28,7 @@ export default function SignIn() {
   return (
     <>
       <div className="w-[calc(100vw-4rem)] min-h-[calc(100vh-4rem)] flex flex-1 flex-col justify-center items-center px-3 pt-3 lg:px-8 dark:bg-darkPrimary">
-        <div className="shadow-2xl w-[100%] sm:w-[350px] px-4 sm:px-6 py-2  rounded-4xl dark:bg-darkSecondary">
+        <div className="shadow-2xl w-[90%] ml-5 sm:ml-0 sm:w-[350px] px-4 sm:px-6 py-2  rounded-4xl dark:bg-darkSecondary">
           <div className="sm:mx-auto sm:w-full sm:max-w-sm flex flex-col justify-center items-center">
             <Image src="/user.svg" alt="" width={90} height={90} priority/>
             <h2 className="mt-5 sm:mt-0 text-center text-2xl/9 font-bold tracking-tight text-gray-900 dark:text-white">

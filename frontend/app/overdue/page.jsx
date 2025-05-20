@@ -2,7 +2,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { TaskContext } from "../_context/TaskContext";
 import Task from "../_components/TaskComponents/Task";
-import Link from "next/link";
 import { UserContext } from "../_context/UserProvider";
 import EmptyState from "../_components/EmptyState";
 import PagesTitle from "../_components/PagesTitle";

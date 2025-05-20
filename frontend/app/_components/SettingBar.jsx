@@ -48,7 +48,7 @@ const SettingBar = () => {
     setIsMounted(true);
   }, []);
   return (
-    <div className="flex bg-white dark:bg-darkSecondary h-screen w-13 sm:w-16 flex-col justify-between fixed top-16 z-50">
+    <div className="z-30 flex bg-white dark:bg-darkSecondary h-[90vh] w-13 sm:w-16 flex-col justify-between fixed top-16 ">
       <div>
         <div className="border-t border-gray-100 dark:border-darkPrimary">
           <div className="px-2">
@@ -67,10 +67,10 @@ const SettingBar = () => {
       </div>
 
       {isMounted && user?.user?.username && (
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col">
           {/* delete all tasks button  */}
           {isDeleteAll && <DeleteAllTasks />}
-          <div className="sticky inset-x-0 bottom-0 border-t mb-10 border-gray-100 dark:border-darkPrimary bg-white dark:bg-darkSecondary  p-2">
+          <div className="sticky inset-x-0 bottom-0 border-t sm:mb-10 border-gray-100 dark:border-darkPrimary bg-white dark:bg-darkSecondary  p-2">
             <button
               aria-label="Delete all tasks"
               onClick={() => setIsDeleteAll(true)}

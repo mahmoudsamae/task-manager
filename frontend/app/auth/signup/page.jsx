@@ -20,15 +20,16 @@ export default function SingUp() {
         navigate.push("/auth/signin")
       })
     } catch (error) {
-      console.log(error)
-      setError(error?.response?.data?.message || "Something went wrong");
+      setError(error?.response?.data?.message || "Something went wrong", {
+        className: "text-16 px-3 py-2 min-w-[300px] min-h-[300px]"      
+      });
     }
   }
 
   return (
     <>
-      <div className="w-[calc(100vw-4rem)] min-h-[calc(100vh-4rem)] flex flex-1 flex-col justify-center items-center px-3 pt-3 lg:px-8 dark:bg-darkPrimary">
-        <div className="shadow-2xl w-[100%] sm:w-[350px] px-4 sm:px-6 py-2  rounded-4xl dark:bg-darkSecondary">
+      <div className="w-[calc(100vw-4rem)] min-h-[calc(100vh-4rem)] flex flex-1 flex-col justify-center items-center px-3 pt-3 lg:px-8 bg-gray-100 dark:bg-darkPrimary">
+        <div className="shadow-2xl w-[90%] ml-5 sm:ml-0 sm:w-[350px] px-4 sm:px-6 py-2  rounded-4xl dark:bg-darkSecondary">
           <div className="sm:mx-auto sm:w-full sm:max-w-sm flex flex-col justify-center items-center">
             <Image src="/user.svg" alt="" width={90} height={90} priority />
             <h2 className="text-center dark:text-white text-2xl/9 font-bold tracking-tight text-gray-900">
@@ -98,14 +99,6 @@ export default function SingUp() {
                   >
                     Password
                   </label>
-                  <div className="text-sm">
-                    <a
-                      href="#"
-                      className="font-semibold text-primary hover:text-hover"
-                    >
-                      Forgot password?
-                    </a>
-                  </div>
                 </div>
                 <div className="mt-2">
                   <input
@@ -137,7 +130,7 @@ export default function SingUp() {
               </div>
             </form>
 
-            <p className="text-center text-sm/6 text-gray-500 mt-2">
+            <p className="text-center text-[12px] text-gray-500 my-2">
               Already have an account? Sign in
               <Link
                 href="/auth/signin"

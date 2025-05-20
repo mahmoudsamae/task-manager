@@ -26,6 +26,7 @@ const AddTaskForm = () => {
         getAllTasks_();
         toast.success("New Task Created", {
           position: "top-right",
+          delay: ".2s"
         });
         setAddTask(false);
         reset();

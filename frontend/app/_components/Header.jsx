@@ -17,10 +17,10 @@ const Header = () => {
 
   return (
     <header className="bg-white dark:bg-darkSecondary fixed top-0 w-full z-50">
-      <div className="mx-auto w-full flex justify-between h-16 max-w-screen-xl items-center ">
+      <div className="mx-auto w-full flex justify-between h-16 items-center ">
         <div className="flex flex-1 items-center  justify-between w-full ml-2.5 sm:ml-4">
           <Link
-            className="block relative text-teal-600 mr-4 w-8 sm:w-10 h-10 overflow-hidden"
+            className="block relative text-teal-600 mr-4 w-10 h-10 overflow-hidden"
             href="/"
           >
             <span className="sr-only">Home</span>
@@ -69,7 +69,7 @@ const Header = () => {
             </div>
             <button
               onClick={() => setAddTask(true)}
-              className={`hidden sm:block rounded-4xl px-3 py-1 text-white transition ${
+              className={`hidden cursor-pointer sm:block rounded-4xl px-3 py-1 text-white transition ${
                 isLoggedIn
                   ? "bg-primary hover:bg-hover opacity-100"
                   : "opacity-0"
@@ -80,24 +80,30 @@ const Header = () => {
           </div>
 
           {!isLoggedIn && (
-            <div className="flex items-center gap-4 w-full min-h-[64px]">
-              <div className="flex gap-2 justify-end items-start w-full">
+            <div className="flex flex-col justify-center  items-end sm:items-center  gap-4 w-full min-h-[64px]">
+              <div className="hidden sm:flex gap-2 justify-end  items-start w-full">
                 <>
                   <Link
-                    className="block rounded-md bg-primary px-5 py-2.5 text-sm font-medium text-white transition hover:bg-hover"
+                    className=" block rounded-md bg-primary px-5 py-2.5 text-sm font-medium text-white transition hover:bg-hover"
                     href="/auth/signin"
                   >
                     Sign In
                   </Link>
 
                   <Link
-                    className="hidden rounded-md bg-primary px-5 py-2.5 text-sm font-medium text-white transition hover:bg-hover sm:block"
+                    className=" rounded-md bg-primary px-5 py-2.5 text-sm font-medium text-white transition hover:bg-hover sm:block"
                     href="/auth/signup"
                   >
                     Sign Up
                   </Link>
                 </>
               </div>
+              <Link
+                className="sm:hidden rounded-md bg-primary px-2 py-1.5 text-sm font-medium text-white transition hover:bg-hover"
+                href="/auth/signup"
+              >
+                Sign in/up
+              </Link>
             </div>
           )}
         </div>

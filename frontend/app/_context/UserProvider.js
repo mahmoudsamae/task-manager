@@ -18,7 +18,9 @@ const UserProvider = ({ children }) => {
         await localStorage.setItem("user", JSON.stringify(userData));
         await localStorage.setItem("token", userData?.token);
         setUser(userData);
-        toast.success(res?.data?.message, { position: "top-right" });
+        toast.success(res?.data?.message, {
+          position: "top-right",
+        });
         window.location.href = "/";
       });
     } catch (error) {
